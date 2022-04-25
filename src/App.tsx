@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import Projects from "./components/Projects";
+import Section from "./components/Section";
+import Sidebar from "./components/Sidebar";
+import {
+  algorithmsSection,
+  fullstackSection,
+  creativitySection,
+} from "./data/section";
 
-function App() {
+const App = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
+
+  const toggleIsSidebarOpen = (): void => {
+    setIsSidebarOpen((prevIsSidebarOpen) => !prevIsSidebarOpen);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Navbar toggleIsSidebarOpen={toggleIsSidebarOpen} />
+      <Sidebar
+        isSidebarOpen={isSidebarOpen}
+        toggleIsSidebarOpen={toggleIsSidebarOpen}
+      />
+      <Section {...algorithmsSection} />
+      <Section {...fullstackSection} />
+      <Section {...creativitySection} />
+      <Projects />
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;

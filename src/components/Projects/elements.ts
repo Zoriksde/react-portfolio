@@ -79,10 +79,6 @@ export const ProjectSubtitle = styled.p`
 export const ProjectBtn = styled.div`
   display: flex;
   align-items: center;
-
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
 `;
 
 export const ProjectBtnLink = styled.a`

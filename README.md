@@ -6,5 +6,5 @@ Personal portfolio which contains some basic information about:
 * Creativity & Help
 * Projects
 
-If you are interested in this [Visit my website](przybyszpatryk.com)
+If you are interested in this [visit my website](https://przybyszpatryk.com)
 

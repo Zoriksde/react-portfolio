@@ -2,7 +2,7 @@
 
 Personal portfolio which contains some basic information about:
 * Algorithms & Data Structures & Machine Learning
-* Web Development & Design Patterns * OOP Concepts
+* Web Development & Design Patterns & OOP Concepts
 * Creativity & Help
 * Projects
 
